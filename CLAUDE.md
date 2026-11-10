@@ -22,6 +22,7 @@
 - 純靜態 HTML／CSS／JS，不用框架、外部字型、CDN 或追蹤碼。GitHub Pages 由 `main` 分支根目錄部署，保留 `.nojekyll`。
 - 路徑一律相對。
 - 結構：`index.html`、`assets/css/style.css`（唯一樣式表，色彩 tokens 和入門站相同）、`assets/js/site.js`（作品清單 `WORKS` 和所有互動）、`assets/img/`。
+- 改了 `style.css` 或 `site.js`，就要把 `index.html` 裡兩個連結後面的 `?v=` 換成新值（例如日期＋字母），不然訪客的瀏覽器會繼續用舊版。
 - 圖片放成檔案，不用 base64 內嵌；作品照片檔名 `assets/img/<作品 id>.jpg`。
 - `localStorage` 只存客製訊息草稿，讀寫都包在 `try/catch`；不送出表單、不呼叫後端。
 
