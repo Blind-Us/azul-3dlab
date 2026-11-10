@@ -64,8 +64,6 @@ p { margin: 0 0 16px; }
 /* 區塊 */
 .section { padding-top: 64px; padding-bottom: 64px; border-top: 1px solid var(--border); }
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
-.two { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
-.two > * { min-width: 0; }
 
 /* 作品 */
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -102,15 +100,11 @@ input, textarea { width: 100%; min-height: 48px; padding: 10px 12px; background:
 textarea { resize: vertical; min-height: 96px; }
 #fallback { margin-top: 16px; display: grid; gap: 12px; }
 
-/* 關於我 */
-.stats { display: flex; flex-wrap: wrap; gap: 16px 32px; margin-bottom: 20px; }
-.stats strong { display: block; font-size: 32px; line-height: 1.2; font-variant-numeric: tabular-nums; }
-.stats span { font-size: 14px; color: var(--muted); }
-
 /* 頁尾 */
 .site-footer { background: var(--ink); color: #fff; padding: 32px 0; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
-.site-footer p { margin: 0; }
+.site-footer .btn.primary { background: var(--lime); border-color: var(--lime); color: var(--ink); }
+.site-footer .btn.primary:hover { background: #fff; }
 
 .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 999px; z-index: 30; max-width: 90%; font-size: 15px; }
 [hidden] { display: none !important; }
@@ -121,7 +115,7 @@ textarea { resize: vertical; min-height: 96px; }
 @media (max-width: 640px) {
   html { scroll-padding-top: 16px; }
   .site-header { position: static; }
-  .hero, .two { grid-template-columns: 1fr; gap: 28px; }
+  .hero { grid-template-columns: 1fr; gap: 28px; }
   .hero-photo { justify-self: stretch; max-width: none; }
   .hero { padding-top: 36px; padding-bottom: 48px; }
   .section { padding-top: 48px; padding-bottom: 48px; }
